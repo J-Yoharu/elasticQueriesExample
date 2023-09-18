@@ -20,6 +20,8 @@ POST /<yourIndex>/_update_by_query
     "lang": "painless"
   }
 }
+# other script example
+# ctx._source.tags = ctx._source.tags.stream().map(t -> t.toLowerCase()).collect(Collectors.toList())
 ```
 replace <your_field_name> and use `toLowerCase` or `toUpperCase`
 
